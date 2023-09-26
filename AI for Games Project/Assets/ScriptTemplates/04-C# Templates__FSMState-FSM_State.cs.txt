@@ -1,0 +1,28 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class #SCRIPTNAME# : State
+{
+    RabbitFSM owner;
+    
+    public #SCRIPTNAME#(RabbitFSM _owner)
+    {
+        this.owner = _owner;
+    }
+    
+    public override void Enter()
+    {
+        Debug.Log("Entering State");
+    }
+
+    public override void Execute()
+    {       
+       Debug.Log("Currently Executing");
+    }
+
+    public override void Exit()
+    {
+        Debug.Log("Exiting State");
+    }
+}

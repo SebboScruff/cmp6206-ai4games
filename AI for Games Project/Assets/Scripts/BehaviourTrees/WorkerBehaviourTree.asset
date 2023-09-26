@@ -1,0 +1,341 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-7328573405582245829
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42a1d29bae6aabb4b872162df7eaa03d, type: 3}
+  m_Name: RootNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 4ccc94fecb0895d42a034e5b2c187581
+  position: {x: 0, y: 0}
+  parentObj: {fileID: 0}
+  description: The start point of this behaviour tree
+  child: {fileID: 2687300262223762093}
+--- !u!114 &-5967770186231320828
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0ea99658c1e1904fb3c49fbea4febd6, type: 3}
+  m_Name: SequencerNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 434b0841d1c572c4f815c1fb4949cc99
+  position: {x: -23.718414, y: 679.10034}
+  parentObj: {fileID: 0}
+  description: Executes each child node from left to right. Returns up the tree with
+    Success if all children succeed; immediately fails if any child fails
+  children:
+  - {fileID: -4623234812899390034}
+  - {fileID: 1795794815234574828}
+--- !u!114 &-5749160894041822714
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b45df4493cdc21842a3e13cd950adb2a, type: 3}
+  m_Name: SetStateNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 7615bf748ea0ca147967df9b4ab7f14b
+  position: {x: -395.20004, y: 678.3999}
+  parentObj: {fileID: 0}
+  description: Changes the agent's current active state to SCARED
+  newState: 3
+  resourceGatherer: {fileID: 0}
+--- !u!114 &-5242462016311699235
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0ea99658c1e1904fb3c49fbea4febd6, type: 3}
+  m_Name: SequencerNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 8a947d412263d054d9b7e6ee75949166
+  position: {x: -130.4001, y: 474.39996}
+  parentObj: {fileID: 0}
+  description: Executes each child node from left to right. Returns up the tree with
+    Success if all children succeed; immediately fails if any child fails
+  children:
+  - {fileID: 9195131091163968391}
+  - {fileID: -5967770186231320828}
+--- !u!114 &-4623234812899390034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 297c45c98817eb24493601a7ec2bedcb, type: 3}
+  m_Name: CheckStaminaNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 818eb9d4d624c7743bbc9125a2eec848
+  position: {x: -129.59998, y: 858.39996}
+  parentObj: {fileID: 0}
+  description: Does this agent have enough stamina to work?
+  resourceGatherer: {fileID: 0}
+--- !u!114 &-2632689880019347855
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66daef4c157963641ba058443c6364ed, type: 3}
+  m_Name: CheckScaredNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: d8e987c14807e0348bd2ca205845d76b
+  position: {x: -614.4001, y: 654.4001}
+  parentObj: {fileID: 0}
+  description: Checks if the agent is currently frightened. Returns success if the
+    agent is; failure if they aren't
+  resourceGatherer: {fileID: 0}
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de564653e619a2f4d9e750f8f12624c9, type: 3}
+  m_Name: WorkerBehaviourTree
+  m_EditorClassIdentifier: 
+  rootNode: {fileID: -7328573405582245829}
+  treeState: 0
+  nodes:
+  - {fileID: -7328573405582245829}
+  - {fileID: 2687300262223762093}
+  - {fileID: 7516263895077321699}
+  - {fileID: -5242462016311699235}
+  - {fileID: -4623234812899390034}
+  - {fileID: 6748203825245875322}
+  - {fileID: -5967770186231320828}
+  - {fileID: 9195131091163968391}
+  - {fileID: 2355309595193956550}
+  - {fileID: 1795794815234574828}
+  - {fileID: 1769565931407705987}
+  - {fileID: 8123946314977001421}
+  - {fileID: -2632689880019347855}
+  - {fileID: -5749160894041822714}
+  - {fileID: 7633345292347617794}
+--- !u!114 &1769565931407705987
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b45df4493cdc21842a3e13cd950adb2a, type: 3}
+  m_Name: SetStateNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: bf364345e7e2ecc4c801a04ba818301b
+  position: {x: 325.60007, y: 678.39996}
+  parentObj: {fileID: 0}
+  description: Changes the agent's current active state to DROPPING_OFF_MATERIALS
+  newState: 2
+  resourceGatherer: {fileID: 0}
+--- !u!114 &1795794815234574828
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b45df4493cdc21842a3e13cd950adb2a, type: 3}
+  m_Name: SetStateNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 2e205b09bc6a88a48a4c6a5bc5d6e30a
+  position: {x: 54.68155, y: 858.3003}
+  parentObj: {fileID: 0}
+  description: Changes the agent's current active state to WORKING
+  newState: 0
+  resourceGatherer: {fileID: 0}
+--- !u!114 &2355309595193956550
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 297c45c98817eb24493601a7ec2bedcb, type: 3}
+  m_Name: CheckStaminaNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 4840794b5ab2a324a89ab59c6ffc5dcb
+  position: {x: 150.00002, y: 679.2}
+  parentObj: {fileID: 0}
+  description: Does this agent have enough stamina to work?
+  resourceGatherer: {fileID: 0}
+--- !u!114 &2687300262223762093
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bdc9b0c584e05b24798266c4d723c0d7, type: 3}
+  m_Name: RepeatNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 97a3c3d662da5154fa009dd5ef70f4b9
+  position: {x: -0.00004130623, y: 133.52913}
+  parentObj: {fileID: 0}
+  description: Repeats its subtree, either a certain number of times or indefinitely
+  child: {fileID: 7516263895077321699}
+  infinite: 1
+  numOfRepeats: 1
+--- !u!114 &6748203825245875322
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0ea99658c1e1904fb3c49fbea4febd6, type: 3}
+  m_Name: SequencerNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 3bf02af3226036341847ecbbecd5ecef
+  position: {x: 228.79997, y: 474.39996}
+  parentObj: {fileID: 0}
+  description: Executes each child node from left to right. Returns up the tree with
+    Success if all children succeed; immediately fails if any child fails
+  children:
+  - {fileID: 2355309595193956550}
+  - {fileID: 1769565931407705987}
+--- !u!114 &7516263895077321699
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75e7017546ad607448e6d40a09caaa8d, type: 3}
+  m_Name: SelectorNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 578ceb5116686a549aef867b0f248b65
+  position: {x: -0.000014831297, y: 271.90033}
+  parentObj: {fileID: 0}
+  description: Executes each child from left to right. Stops and returns success
+    as soon as one child succeeds; returns failure if no children succeed
+  children:
+  - {fileID: 7633345292347617794}
+  - {fileID: -5242462016311699235}
+  - {fileID: 6748203825245875322}
+  - {fileID: 8123946314977001421}
+--- !u!114 &7633345292347617794
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0ea99658c1e1904fb3c49fbea4febd6, type: 3}
+  m_Name: SequencerNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 89d3f3aa66fc4b44db470dba60db1c6b
+  position: {x: -503.41754, y: 474.7751}
+  parentObj: {fileID: 0}
+  description: Executes each child node from left to right. Returns up the tree with
+    Success if all children succeed; immediately fails if any child fails
+  children:
+  - {fileID: -2632689880019347855}
+  - {fileID: -5749160894041822714}
+--- !u!114 &8123946314977001421
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b45df4493cdc21842a3e13cd950adb2a, type: 3}
+  m_Name: SetStateNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 25569a2b60d55c84cbb0725a2f2922b0
+  position: {x: 427.09003, y: 474.39996}
+  parentObj: {fileID: 0}
+  description: Changes the agent's current active state to RESTING
+  newState: 1
+  resourceGatherer: {fileID: 0}
+--- !u!114 &9195131091163968391
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 100a8fa3c0274bf4493ecdeb0ce7d910, type: 3}
+  m_Name: CheckInventoryNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: ff17b611e2cd12743b77326e3b80d567
+  position: {x: -208.4, y: 680}
+  parentObj: {fileID: 0}
+  description: Does this agent have available inventory space?
+  resourceGatherer: {fileID: 0}

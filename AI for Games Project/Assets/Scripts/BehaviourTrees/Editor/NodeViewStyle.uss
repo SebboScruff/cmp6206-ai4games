@@ -1,0 +1,149 @@
+#node-border {
+    background-color: rgb(56, 56, 56);
+    border-left-color: rgb(180, 16, 16);
+    border-right-color: rgb(180, 16, 16);
+    border-top-color: rgb(180, 16, 16);
+    border-bottom-color: rgb(180, 16, 16);
+    border-left-width: 1px;
+    border-right-width: 1px;
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+#input {
+    align-items: center;
+}
+
+#output {
+    align-items: center;
+}
+
+#selection-border {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
+
+:hover > #selection-border {
+    border-left-width: 1px;
+    border-right-width: 1px;
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    border-left-color: rgba(0, 33, 192, 255);
+    border-right-color: rgba(0, 33, 192, 255);
+    border-top-color: rgba(0, 33, 192, 255);
+    border-bottom-color: rgba(0, 33, 192, 255);
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+:selected > #selection-border {
+    border-left-color: rgb(0, 33, 192);
+    border-right-color: rgb(0, 33, 192);
+    border-top-color: rgb(0, 33, 192);
+    border-bottom-color: rgb(0, 33, 192);
+    border-left-width: 1px;
+    border-right-width: 1px;
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+}
+
+:hover:selected > #selection-border {
+    border-left-color: rgba(0, 33, 192, 255);
+    border-right-color: rgba(0, 33, 192, 255);
+    border-top-color: rgba(0, 33, 192, 255);
+    border-bottom-color: rgba(0, 33, 192, 255);
+    border-left-width: 2px;
+    border-right-width: 2px;
+    border-top-width: 2px;
+    border-bottom-width: 2px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.node {
+    min-width: 150px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+#title {
+    -unity-font-style: bold;
+    font-size: 14px;
+    -unity-text-align: upper-center;
+}
+
+#description {
+    font-size: 10px;
+    -unity-text-align: upper-center;
+    white-space: normal;
+    max-width: 150px;
+}
+
+#divider {
+    min-height: 1px;
+    background-color: rgba(154, 154, 154, 255);
+}
+
+.action #input {
+    background-color: rgba(1, 202, 46, 255);
+}
+
+.decorator #input {
+    background-color: rgba(30, 145, 214, 255);
+}
+
+.composite #input {
+    background-color: rgba(252, 185, 125, 255);
+}
+
+.root #input {
+    background-color: rgba(207, 100, 105, 255);
+    min-height: 20px;
+}
+
+#node-state {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(130, 0, 0, 255);
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.running #node-state {
+    background-color: rgba(255, 231, 3, 255);
+}
+
+.success #node-state {
+    background-color: rgba(66, 192, 114, 0.75);
+}
+
+.failure #node-state {
+    background-color: rgba(176, 60, 60, 0.63);
+}

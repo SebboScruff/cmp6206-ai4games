@@ -1,0 +1,143 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8513727117912583480
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bdc9b0c584e05b24798266c4d723c0d7, type: 3}
+  m_Name: RepeatNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: b2aafc5b6566e1341940321a0b5265a4
+  position: {x: -7.9999914, y: 78.32962}
+  parentObj: {fileID: 0}
+  description: Continually repeats its subtree, either infinitely or a certain number
+    of times
+  child: {fileID: 3490019573078889230}
+  infinite: 1
+  numOfRepeats: 10
+--- !u!114 &-4471367692436144531
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42a1d29bae6aabb4b872162df7eaa03d, type: 3}
+  m_Name: RootNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 37ea1b1f50d6a2646a1d4a6a062768be
+  position: {x: -4.8000007, y: -34.05981}
+  parentObj: {fileID: 0}
+  description: 
+  child: {fileID: -8513727117912583480}
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de564653e619a2f4d9e750f8f12624c9, type: 3}
+  m_Name: TestTree
+  m_EditorClassIdentifier: 
+  rootNode: {fileID: -4471367692436144531}
+  treeState: 0
+  nodes:
+  - {fileID: -4471367692436144531}
+  - {fileID: 3490019573078889230}
+  - {fileID: -8513727117912583480}
+  - {fileID: 8958028487572366669}
+  - {fileID: 5650149863388832950}
+  - {fileID: 3262250572459044801}
+--- !u!114 &3262250572459044801
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7669e8dd17b0c04cbfb3ac1e5b0e236, type: 3}
+  m_Name: AutoFailNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 792abc4caf3bcd44db2dbfd165fb0b3c
+  position: {x: -4.7999573, y: 464.80002}
+  parentObj: {fileID: 0}
+  description: Automatically fails. For debugging & testing purposes
+--- !u!114 &3490019573078889230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0ea99658c1e1904fb3c49fbea4febd6, type: 3}
+  m_Name: SequencerNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 1fa07f65247496c4db4e16f7d664d846
+  position: {x: -5.3549943, y: 249.5864}
+  parentObj: {fileID: 0}
+  description: Goes through children, left to right, until one fails. Returns up
+    the tree with Success if all children succeed
+  children:
+  - {fileID: 5650149863388832950}
+  - {fileID: 3262250572459044801}
+  - {fileID: 8958028487572366669}
+--- !u!114 &5650149863388832950
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 416abd132454dcc468a6fac29fcfe18b, type: 3}
+  m_Name: MoveForwardNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: b911fde0c4209874aa336654a04a7b6a
+  position: {x: -191.24997, y: 464.80002}
+  parentObj: {fileID: 0}
+  description: Moves the agent forwards a set distance
+  distanceToMove: 1
+--- !u!114 &8958028487572366669
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de54f04d19bd8ac438abbd47a4cab89a, type: 3}
+  m_Name: WaitNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 80eb18f09fb500c4a8d834f07018aa53
+  position: {x: 197.65002, y: 464.80002}
+  parentObj: {fileID: 0}
+  description: waits a certain amount of time before returning success
+  duration: 1

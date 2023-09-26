@@ -1,0 +1,338 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-7629584852300516034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fad55bd7b2c4bd94893da529405dfeea, type: 3}
+  m_Name: SetSteeringNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 4a31b161d96f2b145ba30cc853642ecb
+  position: {x: 402.64417, y: 603.2001}
+  parentObj: {fileID: 0}
+  description: Sets the Steering type of a steering agent to WANDER
+  newType: 7
+--- !u!114 &-6975821280522658824
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0ea99658c1e1904fb3c49fbea4febd6, type: 3}
+  m_Name: SequencerNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 4c3853d7f856829419006176167506c7
+  position: {x: 323.44412, y: 426.40005}
+  parentObj: {fileID: 0}
+  description: Executes each child node from left to right. Returns up the tree with
+    Success if all children succeed; immediately fails if any child fails
+  children:
+  - {fileID: 1466522889619064536}
+  - {fileID: -7629584852300516034}
+--- !u!114 &-3320388130347973734
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef5daeb0cbce82d489a4a84fd59db4e4, type: 3}
+  m_Name: GuardAttackNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 0780df8e041004f419d487d32048a628
+  position: {x: -389.68762, y: 781.60004}
+  parentObj: {fileID: 0}
+  description: Issues an attack command and then returns Success
+--- !u!114 &-3204934928282171609
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2497f3062b72ac24d8ca37013d537bfd, type: 3}
+  m_Name: IsGuardAggroNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 98802bf9f76d4bb45b65f0ae81b8fbde
+  position: {x: -706.4877, y: 603.2}
+  parentObj: {fileID: 0}
+  description: Checks the guard's aggro timer to return Success if still aggro, or
+    failure if not
+--- !u!114 &-2532713571896660388
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fad55bd7b2c4bd94893da529405dfeea, type: 3}
+  m_Name: SetSteeringNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 7a4668a129aa30e4e98d4bce7cbed1f0
+  position: {x: -122.48763, y: 603.2}
+  parentObj: {fileID: 0}
+  description: Sets the Steering type of a steering agent to PURSUE
+  newType: 5
+--- !u!114 &-725982132825824428
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0ea99658c1e1904fb3c49fbea4febd6, type: 3}
+  m_Name: SequencerNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 8c1e2eb0cdb9dbc41884ed74dcc14f5d
+  position: {x: -604.08765, y: 426.40002}
+  parentObj: {fileID: 0}
+  description: Executes each child node from left to right. Returns up the tree with
+    Success if all children succeed; immediately fails if any child fails
+  children:
+  - {fileID: -3204934928282171609}
+  - {fileID: 8374932793266418419}
+--- !u!114 &-255958740417876146
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2497f3062b72ac24d8ca37013d537bfd, type: 3}
+  m_Name: IsGuardAggroNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 21f684b9afa4819488648c5ddfa6d9e5
+  position: {x: -310.39996, y: 603.2}
+  parentObj: {fileID: 0}
+  description: Checks the guard's aggro timer to return Success if still aggro, or
+    failure if not
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de564653e619a2f4d9e750f8f12624c9, type: 3}
+  m_Name: GuardBehaviourTree
+  m_EditorClassIdentifier: 
+  rootNode: {fileID: 7877538765631634125}
+  treeState: 0
+  nodes:
+  - {fileID: 7877538765631634125}
+  - {fileID: 4435964582550533102}
+  - {fileID: 1779453273957832168}
+  - {fileID: -725982132825824428}
+  - {fileID: -3204934928282171609}
+  - {fileID: 8374932793266418419}
+  - {fileID: 3322385764251939019}
+  - {fileID: -3320388130347973734}
+  - {fileID: 7960000604166164673}
+  - {fileID: -255958740417876146}
+  - {fileID: -2532713571896660388}
+  - {fileID: 1466522889619064536}
+  - {fileID: -6975821280522658824}
+  - {fileID: 2105013451171510117}
+  - {fileID: -7629584852300516034}
+--- !u!114 &1466522889619064536
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af4f281c177aedd46a94c2e7bce05124, type: 3}
+  m_Name: DistanceCheckNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: d2135b1c83200854b9d01f6a892087e1
+  position: {x: 218, y: 603}
+  parentObj: {fileID: 0}
+  description: Checks the distance between the agent and a certain point, returns
+    success if it is closer than the given distance
+  distance: 27
+  targetTag: VillageStorehouse
+  target: {fileID: 0}
+--- !u!114 &1779453273957832168
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75e7017546ad607448e6d40a09caaa8d, type: 3}
+  m_Name: SelectorNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 7ce9a5ec979610c4c8fe55435f84afe7
+  position: {x: -0.000018173218, y: 248.13}
+  parentObj: {fileID: 0}
+  description: Executes each child from left to right. Stops and returns success
+    as soon as one child succeeds; returns failure if no children succeed
+  children:
+  - {fileID: -725982132825824428}
+  - {fileID: 7960000604166164673}
+  - {fileID: -6975821280522658824}
+  - {fileID: 2105013451171510117}
+--- !u!114 &2105013451171510117
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fad55bd7b2c4bd94893da529405dfeea, type: 3}
+  m_Name: SetSteeringNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 32517b922f69be74ab7ccff23dd4251c
+  position: {x: 505.6791, y: 426.39996}
+  parentObj: {fileID: 0}
+  description: Sets the Steering type of a steering agent to SEEK
+  newType: 2
+--- !u!114 &3322385764251939019
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f339c62b07a6a5b4bbe9796211632ed6, type: 3}
+  m_Name: CanGuardAttackNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: c80269011f9efb54cbb688112cade14a
+  position: {x: -606.39996, y: 781.6}
+  parentObj: {fileID: 0}
+  description: Checks both Range and Cooldown to determine whether or not this guard
+    can attack
+--- !u!114 &4435964582550533102
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bdc9b0c584e05b24798266c4d723c0d7, type: 3}
+  m_Name: RepeatNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: a30493690e2c8224b83cb57509d63381
+  position: {x: 0.0000772644, y: 119.58865}
+  parentObj: {fileID: 0}
+  description: Repeats its subtree, either a certain number of times or indefinitely
+  child: {fileID: 1779453273957832168}
+  infinite: 1
+  numOfRepeats: 1
+--- !u!114 &7877538765631634125
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42a1d29bae6aabb4b872162df7eaa03d, type: 3}
+  m_Name: RootNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: b32fc8b5e57055340bf5cd40864b17f0
+  position: {x: 0, y: 0}
+  parentObj: {fileID: 0}
+  description: The start point of this behaviour tree
+  child: {fileID: 4435964582550533102}
+--- !u!114 &7960000604166164673
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0ea99658c1e1904fb3c49fbea4febd6, type: 3}
+  m_Name: SequencerNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 81af37c43fdc33547871ca314b1336e2
+  position: {x: -215.28763, y: 426.40002}
+  parentObj: {fileID: 0}
+  description: Executes each child node from left to right. Returns up the tree with
+    Success if all children succeed; immediately fails if any child fails
+  children:
+  - {fileID: -255958740417876146}
+  - {fileID: -2532713571896660388}
+--- !u!114 &8374932793266418419
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0ea99658c1e1904fb3c49fbea4febd6, type: 3}
+  m_Name: SequencerNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 135c42d38b1a071439fab9ba399eae8f
+  position: {x: -494.48767, y: 603.2}
+  parentObj: {fileID: 0}
+  description: Executes each child node from left to right. Returns up the tree with
+    Success if all children succeed; immediately fails if any child fails
+  children:
+  - {fileID: 3322385764251939019}
+  - {fileID: -3320388130347973734}
